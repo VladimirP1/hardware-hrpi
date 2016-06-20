@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name 7805-norm)(type KiCad)(uri "$(KIPRJMOD)/7805-norm.pretty")(options "")(descr ""))
+  (lib (name arduino)(type KiCad)(uri "$(KIPRJMOD)/arduino.pretty")(options "")(descr ""))
+)
