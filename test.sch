@@ -287,19 +287,6 @@ F 3 "" V 9150 3900 60  0000 C CNN
 	1    9400 3750
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X10 P8
-U 1 1 575BE628
-P 11000 3550
-F 0 "P8" H 11000 4100 50  0000 C CNN
-F 1 "CONN_01X10" V 11100 3550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x10" H 11000 3550 50  0001 C CNN
-F 3 "" H 11000 3550 50  0000 C CNN
-	1    11000 3550
-	1    0    0    -1  
-$EndComp
-Text Label 10400 3900 0    60   ~ 0
-5V
 Text Label 8250 4400 0    60   ~ 0
 GND
 Text Label 8250 4200 0    60   ~ 0
@@ -440,6 +427,44 @@ Text Label 7950 2000 0    60   ~ 0
 5V
 Text Label 8750 1150 0    60   ~ 0
 GND
+Text Label 6650 1400 0    60   ~ 0
+A0
+Text Label 6650 1500 0    60   ~ 0
+A1
+Text Label 6650 1600 0    60   ~ 0
+A2
+Text Label 6650 1700 0    60   ~ 0
+A3
+$Comp
+L CONN_01X04 P17
+U 1 1 576935D8
+P 5350 1100
+F 0 "P17" H 5350 1350 50  0000 C CNN
+F 1 "CONN_01X04" V 5450 1100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 5350 1100 50  0001 C CNN
+F 3 "" H 5350 1100 50  0000 C CNN
+	1    5350 1100
+	1    0    0    -1  
+$EndComp
+Text Label 4700 950  0    60   ~ 0
+STATUS_A
+Text Label 4700 1050 0    60   ~ 0
+STATUS_B
+Text Label 4700 1150 0    60   ~ 0
+STATUS_C
+Text Label 4700 1250 0    60   ~ 0
+GND
+$Comp
+L CONN_01X14 P?
+U 1 1 57693CC8
+P 10550 3650
+F 0 "P?" H 10550 4400 50  0000 C CNN
+F 1 "CONN_01X14" V 10650 3650 50  0000 C CNN
+F 2 "" H 10550 3650 50  0000 C CNN
+F 3 "" H 10550 3650 50  0000 C CNN
+	1    10550 3650
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	2500 1250 2100 1250
 Wire Wire Line
@@ -662,28 +687,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 4200 8200 4200
 Wire Wire Line
-	9650 3100 10800 3100
-Wire Wire Line
-	10800 3200 9650 3200
-Wire Wire Line
-	9650 3300 10800 3300
-Wire Wire Line
-	10800 3400 9650 3400
-Wire Wire Line
-	9650 3500 10800 3500
-Wire Wire Line
-	10800 3600 9650 3600
-Wire Wire Line
-	9650 3700 10800 3700
-Wire Wire Line
-	10800 3800 9650 3800
-Wire Wire Line
-	10800 4000 10800 4200
-Wire Wire Line
-	10800 4200 9650 4200
-Wire Wire Line
-	10800 3900 10350 3900
-Wire Wire Line
 	8650 3800 8200 3800
 Wire Wire Line
 	8650 3900 8200 3900
@@ -761,25 +764,6 @@ Wire Wire Line
 	6600 1600 7000 1600
 Wire Wire Line
 	7000 1700 6600 1700
-Text Label 6650 1400 0    60   ~ 0
-A0
-Text Label 6650 1500 0    60   ~ 0
-A1
-Text Label 6650 1600 0    60   ~ 0
-A2
-Text Label 6650 1700 0    60   ~ 0
-A3
-$Comp
-L CONN_01X04 P?
-U 1 1 576935D8
-P 5350 1100
-F 0 "P?" H 5350 1350 50  0000 C CNN
-F 1 "CONN_01X04" V 5450 1100 50  0000 C CNN
-F 2 "" H 5350 1100 50  0000 C CNN
-F 3 "" H 5350 1100 50  0000 C CNN
-	1    5350 1100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 950  4650 950 
 Wire Wire Line
@@ -788,12 +772,30 @@ Wire Wire Line
 	5150 1150 4650 1150
 Wire Wire Line
 	5150 1250 4650 1250
-Text Label 4700 950  0    60   ~ 0
-STATUS_A
-Text Label 4700 1050 0    60   ~ 0
-STATUS_B
-Text Label 4700 1150 0    60   ~ 0
-STATUS_C
-Text Label 4700 1250 0    60   ~ 0
-GND
+Wire Wire Line
+	9650 4100 10350 4100
+Wire Wire Line
+	9650 4000 10350 4000
+Wire Wire Line
+	9650 3800 10350 3800
+Wire Wire Line
+	9650 3700 10350 3700
+Wire Wire Line
+	9650 3900 10350 3900
+Wire Wire Line
+	9650 3500 10350 3500
+Wire Wire Line
+	9650 3600 10350 3600
+Wire Wire Line
+	9650 3400 10350 3400
+Wire Wire Line
+	9650 3300 10350 3300
+Wire Wire Line
+	9650 3200 10350 3200
+Wire Wire Line
+	9650 3100 10350 3100
+Wire Wire Line
+	10350 3000 8650 3000
+Wire Wire Line
+	8650 3000 8650 3100
 $EndSCHEMATC
