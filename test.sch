@@ -30,7 +30,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:test-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -145,7 +144,7 @@ L R R1
 U 1 1 575AC7A0
 P 2150 4750
 F 0 "R1" V 2230 4750 50  0000 C CNN
-F 1 "7k" V 2150 4750 50  0000 C CNN
+F 1 "10k" V 2150 4750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 4750 50  0001 C CNN
 F 3 "" H 2150 4750 50  0000 C CNN
 	1    2150 4750
@@ -156,16 +155,12 @@ L R R2
 U 1 1 575ACBE1
 P 2150 5400
 F 0 "R2" V 2230 5400 50  0000 C CNN
-F 1 "7k" V 2150 5400 50  0000 C CNN
+F 1 "10k" V 2150 5400 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 5400 50  0001 C CNN
 F 3 "" H 2150 5400 50  0000 C CNN
 	1    2150 5400
 	0    1    1    0   
 $EndComp
-Text Label 2550 4400 0    60   ~ 0
-3V3
-Text Label 2550 5050 0    60   ~ 0
-3V3
 Text Label 2550 5400 0    60   ~ 0
 TXD
 Text Label 2550 4750 0    60   ~ 0
@@ -175,7 +170,7 @@ RXD5V
 Text Label 1750 5400 0    60   ~ 0
 TXD5V
 Text Notes 1300 4250 0    60   ~ 0
-Level shifter
+Over-current protection
 Text Notes 1200 3500 0    60   ~ 0
 Serial port
 Text Notes 3450 4750 0    60   ~ 0
@@ -481,7 +476,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 3050 3400 3050
 Wire Wire Line
-	3000 1250 3400 1250
+	3000 1250 3700 1250
 Wire Wire Line
 	3150 1250 3150 1350
 Wire Wire Line
@@ -514,11 +509,6 @@ Wire Wire Line
 Wire Wire Line
 	2300 4750 2750 4750
 Wire Wire Line
-	2400 4750 2400 4700
-Connection ~ 2400 4750
-Wire Wire Line
-	2400 4400 2750 4400
-Wire Wire Line
 	2000 4750 1750 4750
 Wire Notes Line
 	1250 4150 3200 4150
@@ -531,16 +521,9 @@ Wire Notes Line
 Wire Wire Line
 	2300 5400 2750 5400
 Wire Wire Line
-	2400 5400 2400 5350
-Connection ~ 2400 5400
-Wire Wire Line
-	2400 5050 2750 5050
-Wire Wire Line
 	2000 5400 1750 5400
 Wire Notes Line
-	1250 4250 1950 4250
-Wire Notes Line
-	1950 4250 1950 4150
+	1250 4250 2400 4250
 Wire Notes Line
 	1150 3400 3300 3400
 Wire Notes Line
@@ -773,8 +756,6 @@ Wire Wire Line
 	8650 3000 8650 3100
 Wire Wire Line
 	9650 4200 10350 4200
-Wire Wire Line
-	10350 4300 9650 4300
 $Comp
 L LED D1
 U 1 1 5769062A
@@ -813,7 +794,7 @@ L R R3
 U 1 1 57690955
 P 5400 900
 F 0 "R3" V 5480 900 50  0000 C CNN
-F 1 "R" V 5400 900 50  0000 C CNN
+F 1 "470" V 5400 900 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 900 50  0001 C CNN
 F 3 "" H 5400 900 50  0000 C CNN
 	1    5400 900 
@@ -824,7 +805,7 @@ L R R4
 U 1 1 576909DA
 P 5400 1050
 F 0 "R4" V 5480 1050 50  0000 C CNN
-F 1 "R" V 5400 1050 50  0000 C CNN
+F 1 "470" V 5400 1050 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 1050 50  0001 C CNN
 F 3 "" H 5400 1050 50  0000 C CNN
 	1    5400 1050
@@ -835,7 +816,7 @@ L R R5
 U 1 1 57690A25
 P 5400 1200
 F 0 "R5" V 5480 1200 50  0000 C CNN
-F 1 "R" V 5400 1200 50  0000 C CNN
+F 1 "470" V 5400 1200 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 1200 50  0001 C CNN
 F 3 "" H 5400 1200 50  0000 C CNN
 	1    5400 1200
@@ -871,4 +852,31 @@ Text Label 4250 1050 0    60   ~ 0
 STATUS_B
 Text Label 4250 1200 0    60   ~ 0
 STATUS_C
+Wire Wire Line
+	10350 4300 10350 4500
+Wire Wire Line
+	10350 4500 11100 4500
+Text Label 10750 4500 0    60   ~ 0
+5V
+Wire Notes Line
+	2400 4250 2400 4150
+Text Notes 1300 5150 0    60   ~ 0
+Pcb has no space for diodes to 3.3V for\n5v to 3.3v level shifting, we have to use\nRPI's internal input protection diodes.
+$Comp
+L CONN_01X02 P17
+U 1 1 576958DC
+P 3900 1350
+F 0 "P17" H 3900 1500 50  0000 C CNN
+F 1 "CONN_01X02" V 4000 1350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 3900 1350 50  0001 C CNN
+F 3 "" H 3900 1350 50  0000 C CNN
+	1    3900 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1250 3700 1300
+Wire Wire Line
+	3700 1400 3400 1400
+Wire Wire Line
+	3400 1400 3400 1450
 $EndSCHEMATC
