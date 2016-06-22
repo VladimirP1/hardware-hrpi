@@ -2,8 +2,10 @@
         a[label="Raspberry Pi",color="red"];
 
 subgraph cluster_0 {
-       b[label="HRPI board",color="green"];
+       label="HRPI board";
+       b[label="Passive connections",color="green"];
        c[label="Arduino Nano",color="green"];
+       g[label="Status leds",color="green"];
 
 }
        c5[label="Current sensor",color="green"];
@@ -19,6 +21,9 @@ subgraph cluster_0 {
         a -> b[ label="SPI",dir="none" ];
         a -> b[ label="I2C",dir="none" ];
         a -> b[ label="UART",dir="none" ];
+        a -> b[ label="GPIO",dir="none" ];
+        b -> g[ label="GPIO"];
+        c -> g[ label="GPIO"];
         a -> b[ label="PWM"];
 
 
