@@ -1,0 +1,37 @@
+    digraph {
+        a[label="Raspberry Pi",color="red"];
+
+subgraph cluster_0 {
+       b[label="HRPI board",color="green"];
+       c[label="Arduino Nano",color="green"];
+
+}
+       c5[label="Current sensor",color="green"];
+       c4[label="Voltage sensor",color="green"];
+       c3[label="Airspeed",color="green"];
+       c2[label="Sonar",color="green"];
+       c1[label="RC reciever",color="green"];
+
+        d[label="MPU6000",color="green"];
+        e[label="HMC5883L",color="green"];
+        f[label="MS5611",color="green"];
+
+        a -> b[ label="SPI",dir="none" ];
+        a -> b[ label="I2C",dir="none" ];
+        a -> b[ label="UART",dir="none" ];
+        a -> b[ label="PWM"];
+
+
+        b -> c[ label="I2C",dir="none" ];
+        c1 -> c[ label="PWM" ];
+        c2 -> c[ label="Analog" ];
+        c3 -> c[ label="Analog" ];
+        c4 -> c[ label="Analog" ];
+        c5 -> c[ label="Analog" ];
+
+        b -> d[ label="SPI",dir="none" ];
+        b -> e[ label="I2C",dir="none" ];
+        b -> f[ label="I2C",dir="none" ];
+
+    }
+    
