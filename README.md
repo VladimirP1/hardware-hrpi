@@ -1,6 +1,10 @@
 # A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot)
 This board has been designed considering this technology: http://cxem.net/master/45.php
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
+#Repo structure
+- doc: documentation
+- src: Kicad and arduino sources
+
 # Todo
 - Modify firmware to recieve 12 PWM channels instead of 8.
 - Add pinout charts 
