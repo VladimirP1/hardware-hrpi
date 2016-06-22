@@ -12,7 +12,7 @@ This board has been designed considering this technology: http://cxem.net/master
 ![bottom view](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/bottom1.png "HRPI bottom view")
 
 # License
-The repo contents are licenses under the MIT license
+The repo contents are licensed under the MIT license
 
 Copyright (c) 2016 Vladimir Pinchuk
 
