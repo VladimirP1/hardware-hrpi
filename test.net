@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/admin/Документы/test/hardware-hrpi/test.sch)
-    (date "Вт 21 июн 2016 23:42:33")
+    (date "Ср 22 июн 2016 16:26:54")
     (tool "Eeschema 4.0.2-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -418,10 +418,10 @@
   (libraries
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
-    (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
     (library (logical arduino_nano)
-      (uri /home/admin/Документы/test/hardware-hrpi/arduino_nano.lib)))
+      (uri /home/admin/Документы/test/hardware-hrpi/arduino_nano.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib)))
   (nets
     (net (code 1) (name /SCL)
       (node (ref P2) (pin 8))
