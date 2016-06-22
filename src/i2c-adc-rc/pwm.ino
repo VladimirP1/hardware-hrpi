@@ -10,7 +10,7 @@ volatile boolean dir;
 //CH3  D5  PD5 PCINT21
 //CH4  D6  PD6 PCINT22
 //CH5  D7  PD7 PCINT23
---
+
 //CH6  D8  PB0 PCINT0
 //CH7  D9  PB1 PCINT1
 //CH8  D10 PB2 PCINT2
@@ -24,6 +24,9 @@ volatile boolean dir;
 //PCMSK2  16-23
 
 void setuppcint() {
+  DDRD &= ~(1 << 3);
+  DDRD &= ~(1 << 4);
+  DDRD &= ~(1 << 2);
   DDRD &= ~(1 << 5);//0 P2
   DDRD &= ~(1 << 6);//1 P2
   DDRD &= ~(1 << 7);//2 P2
@@ -32,6 +35,8 @@ void setuppcint() {
   DDRB &= ~(1 << 2);//5 P0
   DDRB &= ~(1 << 3);//6 P0
   DDRB &= ~(1 << 4);//7 P0
+  DDRB &= ~(1 << 5);
+
   DDRB |= (1 << 5);
   PCICR |= (1 << PCIE0) | (1 << PCIE1) | (1 << PCIE2);
   PCMSK0 |= (1 << PCINT0) | (1 << PCINT1) | (1 << PCINT2) | (1 << PCINT3) | (1 << PCINT4);

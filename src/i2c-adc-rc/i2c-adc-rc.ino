@@ -141,7 +141,7 @@ void receiveEvent(int nbytes) {
       ret = regs[x];
     else
       ret = 0x23;
-    if (x == 0x19)
+    if (x == 0x27/*0x19*/)
       for (int i = 0; i < 24; i++)
         regs[i + 0xA] = regs1[i + 0xA];
     else if (x == 0x8)
