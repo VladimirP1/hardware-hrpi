@@ -9,28 +9,36 @@
 // 7  A3:LSB
 // 8  A3:MSB
 // 9  ADCR: | RES | RES | RES | RES | ADC3| ADC2| ADC1| ADC0|
-// A  RC1:LSB
-// B  RC1:MSB
-// C  RC2:LSB
-// D  RC2:MSB
-// E  RC3:LSB
-// F  RC3:MSB
-// 10 RC4:LSB
-// 11 RC4:MSB
-// 12 RC5:LSB
-// 13 RC5:MSB
-// 14 RC6:LSB
-// 15 RC6:MSB
-// 16 RC7:LSB
-// 17 RC7:MSB
-// 18 RC8:LSB
-// 19 RC8:MSB
+// A  RC1 :LSB
+// B  RC1 :MSB
+// C  RC2 :LSB
+// D  RC2 :MSB
+// E  RC3 :LSB
+// F  RC3 :MSB
+// 10 RC4 :LSB
+// 11 RC4 :MSB
+// 12 RC5 :LSB
+// 13 RC5 :MSB
+// 14 RC6 :LSB
+// 15 RC6 :MSB
+// 16 RC7 :LSB
+// 17 RC7 :MSB
+// 18 RC8 :LSB
+// 19 RC8 :MSB
+// 20 RC8 :LSB
+// 21 RC9 :MSB
+// 22 RC9 :LSB
+// 23 RC10:MSB
+// 24 RC10:LSB
+// 25 RC11:MSB
+// 26 RC12:LSB
+// 27 RC12:MSB
 
 #include <Wire.h>
 
 volatile unsigned char ret = 0;
-volatile unsigned char regs[0x20];
-volatile unsigned char regs1[0x20];
+volatile unsigned char regs[0x28];
+volatile unsigned char regs1[0x28];
 
 #define NREGS 0x20
 
@@ -134,7 +142,7 @@ void receiveEvent(int nbytes) {
     else
       ret = 0x23;
     if (x == 0x19)
-      for (int i = 0; i < 16; i++)
+      for (int i = 0; i < 24; i++)
         regs[i + 0xA] = regs1[i + 0xA];
     else if (x == 0x8)
       for (int i = 0; i < 8; i++)

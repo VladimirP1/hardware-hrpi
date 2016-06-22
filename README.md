@@ -3,7 +3,8 @@ This board has been designed considering this technology: http://cxem.net/master
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
 #Repo structure
 - doc: documentation
-- src: Kicad and arduino sources
+- src: KICAD sources
+- src/i2c-adc-rc: Arduino sources
 
 # Todo
 - Modify firmware to recieve 12 PWM channels instead of 8.
