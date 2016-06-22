@@ -2,10 +2,10 @@
 
   (general
     (links 104)
-    (no_connects 2)
+    (no_connects 0)
     (area 129.924999 104.924999 227.575001 177.575001)
     (thickness 1.6)
-    (drawings 53)
+    (drawings 55)
     (tracks 504)
     (zones 0)
     (modules 26)
@@ -451,6 +451,11 @@
     (pad 39 thru_hole oval (at 0 48.26 90) (size 2.1 2.1) (drill 1.016) (layers *.Cu *.Mask F.SilkS))
     (pad 40 thru_hole oval (at 2.54 48.26 90) (size 2.1 2.1) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 40 /AUX1))
+    (model /home/admin/Документы/PINS.x3d
+      (at (xyz 0.15 0.05 -0.456693))
+      (scale (xyz 10 10 10))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module arduino:arduino_nano (layer F.Cu) (tedit 575BC7CB) (tstamp 575BD01A)
@@ -1282,6 +1287,12 @@
     )
   )
 
+  (gr_text 1 (at 167.8 112.2) (layer F.Cu)
+    (effects (font (size 1 1) (thickness 0.25)))
+  )
+  (gr_text 1 (at 135 122) (layer F.Cu)
+    (effects (font (size 1 1) (thickness 0.25)))
+  )
   (gr_text 5V (at 131.2 129.6) (layer F.Cu)
     (effects (font (size 1 1) (thickness 0.25)))
   )

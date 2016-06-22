@@ -30,6 +30,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:test-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -63,8 +64,6 @@ Text Label 2150 1450 0    60   ~ 0
 SCL
 Text Label 2150 1550 0    60   ~ 0
 RC0
-Text Notes 4850 1950 0    60   ~ 0
-7,11,13,15,31,33,35,37\nPPM_IN=29
 Text Label 2150 1750 0    60   ~ 0
 RC1
 Text Label 2150 1850 0    60   ~ 0
@@ -879,4 +878,46 @@ Wire Wire Line
 	3700 1400 3400 1400
 Wire Wire Line
 	3400 1400 3400 1450
+Text Notes 4200 2300 0    60   ~ 0
+7,11,13,15,29,31,33,35,37,40,36,26,24
+Wire Wire Line
+	8650 4100 8200 4100
+Wire Wire Line
+	8650 4000 8200 4000
+Text Label 8250 4100 0    60   ~ 0
+RCOK
+Text Label 8250 4000 0    60   ~ 0
+OK
+$Comp
+L LED D5
+U 1 1 5769A8C2
+P 4750 1700
+F 0 "D5" H 4750 1800 50  0000 C CNN
+F 1 "LED" H 4750 1600 50  0000 C CNN
+F 2 "LEDs:LED-3MM" H 4750 1700 50  0001 C CNN
+F 3 "" H 4750 1700 50  0000 C CNN
+	1    4750 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 1700 4250 1700
+Wire Wire Line
+	4950 1700 5350 1700
+$Comp
+L R R7
+U 1 1 5769C814
+P 5500 1700
+F 0 "R7" V 5580 1700 50  0000 C CNN
+F 1 "R" V 5500 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5430 1700 50  0001 C CNN
+F 3 "" H 5500 1700 50  0000 C CNN
+	1    5500 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 1700 6000 1700
+Text Label 5800 1700 0    60   ~ 0
+GND
+Text Label 4300 1700 0    60   ~ 0
+RCOK
 $EndSCHEMATC
