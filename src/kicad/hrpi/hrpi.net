@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/admin/Документы/test/hardware-hrpi/test.sch)
-    (date "Ср 22 июн 2016 16:26:54")
+    (source /home/admin/Документы/test/hardware-hrpi/src/kicad/hrpi/hrpi.sch)
+    (date "Чт 23 июн 2016 13:26:07")
     (tool "Eeschema 4.0.2-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -9,7 +9,7 @@
         (company)
         (rev)
         (date "15 nov 2012")
-        (source test.sch)
+        (source hrpi.sch)
         (comment (number 1) (value ""))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
@@ -416,10 +416,10 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
+    (library (logical arduino_nano)
+      (uri arduino_nano.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
-    (library (logical arduino_nano)
-      (uri /home/admin/Документы/test/hardware-hrpi/arduino_nano.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib)))
   (nets

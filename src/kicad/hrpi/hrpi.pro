@@ -81,9 +81,9 @@ LibName10=dip_sockets
 version=1
 [eeschema]
 version=1
-LibDir=/home/admin/Документы/test
+LibDir=./
 [eeschema/libraries]
-LibName1=test-rescue
+LibName1=hrpi-rescue
 LibName2=power
 LibName3=device
 LibName4=transistors
