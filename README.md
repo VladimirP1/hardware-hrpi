@@ -18,6 +18,7 @@ This board has been designed considering this technology: http://cxem.net/master
 - RC aux:  https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png
 
 - If P9 and P10 are connected, then rc rail connects to 5V electonics power.
+- MPU6000 uses only MOSI, MISO, SCLK, NSS2, GND, 3V3 form the SPI connector.
 
 # Todo
 - Modify firmware to recieve 12 PWM channels instead of 8.

@@ -17,6 +17,7 @@ subgraph cluster_0 {
         d[label="MPU6000",color="green"];
         e[label="HMC5883L",color="green"];
         f[label="MS5611",color="green"];
+        y[label="RC out",color="green"];
 
         a -> b[ label="SPI",dir="none" ];
         a -> b[ label="I2C",dir="none" ];
@@ -24,6 +25,7 @@ subgraph cluster_0 {
         a -> b[ label="GPIO",dir="none" ];
         b -> g[ label="GPIO"];
         c -> g[ label="GPIO"];
+        b -> y[ label="GPIO"];
         a -> b[ label="PWM"];
 
 
