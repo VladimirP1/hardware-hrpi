@@ -7,6 +7,16 @@ This board has been designed considering this technology: http://cxem.net/master
 - src/kicad/hrpi: KICAD sources
 - src/arduino/i2c-adc-rc: Arduino sources
 
+#Pinouts
+- Serial:  https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png
+- I2C:     https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/I2C.png
+- SPI:     https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SPI.png
+- ADC:     https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/ADC.png
+- RC main: https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCm.png
+- RC aux:  https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png
+
+- If P9 and P10 are connected, then rc rail connects to 5V electonics power.
+
 # Todo
 - Modify firmware to recieve 12 PWM channels instead of 8.
 - Add pinout charts 
