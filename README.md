@@ -1,4 +1,6 @@
-# A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot)
+# A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot) 
+(waf configure --board=hrpi)
+The APM port requires servod form ServoBlaster to be in PATH.
 This board has been designed considering this technology: http://cxem.net/master/45.php
 
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
