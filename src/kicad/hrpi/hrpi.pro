@@ -83,7 +83,7 @@ version=1
 version=1
 LibDir=./
 [eeschema/libraries]
-LibName1=hrpi-rescue
+LibName1=valves
 LibName2=power
 LibName3=device
 LibName4=transistors
@@ -113,4 +113,3 @@ LibName27=siliconi
 LibName28=opto
 LibName29=atmel
 LibName30=contrib
-LibName31=valves
