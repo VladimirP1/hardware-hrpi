@@ -1,9 +1,16 @@
 # A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot) (waf configure --board=hrpi)
 
 The APM port requires servod form ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user) to be in PATH.
-This board has been designed considering this technology: http://cxem.net/master/45.php
-Only one hardware serial is available on the Pi, so either GPS or telemetry should be connected over USB.
 
+This board has been designed considering this technology: http://cxem.net/master/45.php
+
+Only one hardware UART is available on the Pi, so either GPS or telemetry should be connected over USB.
+
+I have built my RT kernel from official Rasberry Pi Foundation's kernel patched with corresponding RT version.
+
+If your pi does not boot with RT-patched kernel try adding sdhci_bcm2708.enable_llm=0 to cmdline
+
+If you expirince hangs with RT kernel try to add dwc_otg.fiq_enable=0 to cmdline
 
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
 
