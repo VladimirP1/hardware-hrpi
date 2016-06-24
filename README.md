@@ -1,7 +1,9 @@
 # A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot) (waf configure --board=hrpi)
 
-The APM port requires servod form ServoBlaster to be in PATH.
+The APM port requires servod form ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user) to be in PATH.
 This board has been designed considering this technology: http://cxem.net/master/45.php
+Only one hardware serial is available on the Pi, so either GPS or telemetry should be connected over USB.
+
 
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
 
@@ -9,7 +11,7 @@ This board has been designed considering this technology: http://cxem.net/master
 This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
 Earlier revision of the board with external diodes work OK, but the current revision is UNTESTED.
 
-ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is configured as output) !!!
+ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is driven HIGH) !!!
 
 #Repo structure
 - doc: documentation
