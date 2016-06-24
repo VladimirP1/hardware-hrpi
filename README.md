@@ -9,6 +9,8 @@ This board has been designed considering this technology: http://cxem.net/master
 This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
 Earlier revision of the board with external diodes work OK, but the current revision is UNTESTED.
 
+ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is configured as output) !!!
+
 #Repo structure
 - doc: documentation
 - src/kicad/hrpi: KICAD sources
@@ -37,6 +39,7 @@ Earlier revision of the board with external diodes work OK, but the current revi
 ![rcm](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCm.png)
 
 # RC aux pinout
+AUX0-AUX4=RC8-RC13
 ![rca](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
 
 # Todo
