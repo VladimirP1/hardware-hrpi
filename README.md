@@ -40,6 +40,7 @@ ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR P
 
 # RC aux pinout
 AUX0-AUX4=RC8-RC13
+
 ![rca](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
 
 # Todo
