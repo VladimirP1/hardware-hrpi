@@ -10,12 +10,18 @@ This board has been designed considering this technology: http://cxem.net/master
 - src/arduino/i2c-adc-rc: Arduino sources
 
 #Pinouts
-- Serial:  ![serial](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png)
-- I2C:     ![i2c](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/I2C.png)
-- SPI:     ![spi](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SPI.png)
-- ADC:     ![adc](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/ADC.png)
-- RC main: ![rcm](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCm.png)
-- RC aux:  ![rca](://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
+- Serial:
+![serial](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png)
+- I2C:
+![i2c](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/I2C.png)
+- SPI:
+![spi](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SPI.png)
+- ADC:
+![adc](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/ADC.png)
+- RC main:
+![rcm](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCm.png)
+- RC aux:
+![rca](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
 
 - If P9 and P10 are connected, then rc rail connects to 5V electonics power.
 - MPU6000 uses only MOSI, MISO, SCLK, NSS2, GND, 3V3 form the SPI connector.
