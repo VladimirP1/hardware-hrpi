@@ -4,6 +4,11 @@ The APM port requires servod form ServoBlaster to be in PATH.
 This board has been designed considering this technology: http://cxem.net/master/45.php
 
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
+
+# WARNING
+This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
+Earlier revision of the board with external diodes work OK, but the current revision is UNTESTED.
+
 #Repo structure
 - doc: documentation
 - src/kicad/hrpi: KICAD sources
