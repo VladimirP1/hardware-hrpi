@@ -12,16 +12,22 @@ This board has been designed considering this technology: http://cxem.net/master
 #Important notes
 - If P9 and P10 are connected, then rc rail connects to 5V electonics power.
 - MPU6000 uses only MOSI, MISO, SCLK, NSS2, GND, 3V3 form the SPI connector.
+
 # Serial pinout
 ![serial](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png)
+
 # I2C pinout
 ![i2c](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/I2C.png)
+
 # SPI pinout
 ![spi](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SPI.png)
+
 # ADC pinout
 ![adc](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/ADC.png)
+
 # RC main pinout
 ![rcm](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCm.png)
+
 # RC aux pinout
 ![rca](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
 
