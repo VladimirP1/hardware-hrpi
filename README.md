@@ -27,6 +27,9 @@ Earlier revision of the board with external diodes work OK, but the current revi
 # SPI pinout
 ![spi](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SPI.png)
 
+# How to connect ACC/GYRO
+![gyroaccel](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/mpu_imu_click.png)
+
 # ADC pinout
 ![adc](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/ADC.png)
 
