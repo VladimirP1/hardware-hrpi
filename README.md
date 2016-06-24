@@ -32,9 +32,7 @@ This board has been designed considering this technology: http://cxem.net/master
 ![rca](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/RCa.png)
 
 # Todo
-- Modify firmware to recieve 12 PWM channels instead of 8.
-- Add pinout charts 
-- add RC OK led
+- handle RC OK led by software
 - maybe upstream APM
 
 # Render
