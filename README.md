@@ -14,10 +14,12 @@ Only one hardware UART is available on the Pi, so either GPS or telemetry should
 - If your pi does not boot with RT-patched kernel try adding sdhci_bcm2708.enable_llm=0 to cmdline. If you expirince hangs with RT kernel try to add dwc_otg.fiq_enable=0 to cmdline.
 
 # WARNING
-This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
+-This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
 Earlier revision of the board with external diodes work OK, but the current revision is UNTESTED.
 
-ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is driven HIGH) !!!
+-ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is driven HIGH) !!!
+
+-Only tested on RPI 2
 
 # Repo structure
 - doc: documentation
