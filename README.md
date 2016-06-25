@@ -31,6 +31,7 @@ ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR P
 - RC input is recieved by arduino nano, then it is read out by RPI over i2c.
 - RC output is done over RPI's gpio using ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user).
 - Sensors must be connected externally by SPI and I2C. Madarnatory sensors: MPU6000(SPI), HMC5883L(I2C), MS5611(I2C, except rover).
+For example GY-63, GY-273 and Mikroe MPU imu click.
 - Power must be provided either over the RC rail with P9 and P10 connected or the P3 connector
 
 
