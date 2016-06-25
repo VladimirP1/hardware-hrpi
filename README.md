@@ -10,11 +10,8 @@ Only one hardware UART is available on the Pi, so either GPS or telemetry should
 
 # RT-preempt
 
-I have built my RT kernel from official Rasberry Pi Foundation's kernel patched with corresponding RT version.
-
-If your pi does not boot with RT-patched kernel try adding sdhci_bcm2708.enable_llm=0 to cmdline
-
-If you expirince hangs with RT kernel try to add dwc_otg.fiq_enable=0 to cmdline
+- I have built my RT kernel from official Rasberry Pi Foundation's kernel patched with corresponding RT version.
+- If your pi does not boot with RT-patched kernel try adding sdhci_bcm2708.enable_llm=0 to cmdline. If you expirince hangs with RT kernel try to add dwc_otg.fiq_enable=0 to cmdline.
 
 # WARNING
 This board uses 10k resistors to protect Raspberry pi's inputs from 5v and relies on its internal protection diodes.
@@ -22,14 +19,20 @@ Earlier revision of the board with external diodes work OK, but the current revi
 
 ALWAYS FLASH FIRMWARE BEFORE PLUGGING IN ARDUINO NANO OR YOU RISK TO BURN YOUR PI (It can happen if either of A4 and A5 is driven HIGH) !!!
 
-#Repo structure
+# Repo structure
 - doc: documentation
 - src/kicad/hrpi: KICAD sources
 - src/arduino/i2c-adc-rc: Arduino sources
 
-#Important notes
-- If P9 and P10 are connected, then rc rail connects to 5V electonics power.
-- MPU6000 uses only MOSI, MISO, SCLK, NSS2, GND, 3V3 form the SPI connector.
+# Important notes
+- MPU6000 uses MOSI, MISO, SCLK, NSS2, GND, 3V3 form the SPI connector.
+
+# Details
+- RC input is recieved by arduino nano, then it is read out by RPI over i2c.
+- RC output is done over RPI's gpio using ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user).
+- Sensors must be connected externally by SPI and I2C. Madarnatory sensors: MPU6000(SPI), HMC5883L(I2C), MS5611(I2C, except rover).
+- Power must be provided either over the RC rail with P9 and P10 connected or the P3 connector
+
 
 # Serial pinout
 ![serial](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png)
@@ -57,6 +60,7 @@ AUX0-AUX4=RC8-RC13
 # Todo
 - handle RC OK led by software
 - maybe upstream APM
+- fix default accel orientation
 
 # Render
 ![top view](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/top1.png "HRPI top view")
