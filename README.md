@@ -1,15 +1,14 @@
 # A simple add-on board for Raspberry Pi to run a downstream verion of APM (https://github.com/VladimirP1/ardupilot) (waf configure --board=hrpi)
 
-The APM port requires servod form ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user) to be in PATH.
-
 This board has been designed considering this technology: http://cxem.net/master/45.php
+
+The APM port requires servod form ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user) to be in PATH.
 
 Only one hardware UART is available on the Pi, so either GPS or telemetry should be connected over USB.
 
 ![scheme](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/scheme.png "Diagram")
 
 # RT-preempt
-
 - I have built my RT kernel from official Rasberry Pi Foundation's kernel patched with corresponding RT version.
 - If your pi does not boot with RT-patched kernel try adding sdhci_bcm2708.enable_llm=0 to cmdline. If you expirince hangs with RT kernel try to add dwc_otg.fiq_enable=0 to cmdline.
 
@@ -34,11 +33,17 @@ Earlier revision of the board with external diodes work OK, but the current revi
 - RC output is done over RPI's gpio using ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster/user).
 - Sensors must be connected externally by SPI and I2C. Madarnatory sensors: MPU6000(SPI), HMC5883L(I2C), MS5611(I2C, except rover).
 Examples of breakout boards: GY-63, GY-273 and Mikroe MPU imu click.
-- Power must be provided either over the RC rail with P9 and P10 connected or the P3 connector
+- Power must be provided either over the RC rail with P9 closed or the P3 connector
 
 
 # Serial pinout
 ![serial](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/SERIAL.png)
+
+# Connecting 3DR radio
+
+If you have two ground modules you can plug one into your PC, one into RPI. They will communicate.
+If they do not, make sure that the have same net id.
+You can also connect to RPI without 3DR radio, over wifi.
 
 # I2C pinout
 ![i2c](https://raw.githubusercontent.com/VladimirP1/hardware-hrpi/master/doc/I2C.png)

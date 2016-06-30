@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:valves
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,7 +29,6 @@ LIBS:siliconi
 LIBS:opto
 LIBS:atmel
 LIBS:contrib
-LIBS:valves
 LIBS:hrpi-cache
 EELAYER 25 0
 EELAYER END
@@ -284,28 +284,6 @@ Text Label 8250 4400 0    60   ~ 0
 GND
 Text Label 8250 4200 0    60   ~ 0
 5V
-$Comp
-L CONN_01X01 P9
-U 1 1 575C0076
-P 5850 5250
-F 0 "P9" H 5850 5350 50  0000 C CNN
-F 1 "CONN_01X01" V 5950 5250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 5850 5250 50  0001 C CNN
-F 3 "" H 5850 5250 50  0000 C CNN
-	1    5850 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X01 P10
-U 1 1 575C011F
-P 6150 5250
-F 0 "P10" H 6150 5350 50  0000 C CNN
-F 1 "CONN_01X01" V 6250 5250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 6150 5250 50  0001 C CNN
-F 3 "" H 6150 5250 50  0000 C CNN
-	1    6150 5250
-	-1   0    0    1   
-$EndComp
 Text Label 8250 3800 0    60   ~ 0
 SDA
 Text Label 8250 3900 0    60   ~ 0
@@ -613,9 +591,9 @@ Wire Wire Line
 	7300 3200 7800 3200
 Connection ~ 7300 3450
 Wire Wire Line
-	6350 5250 6850 5250
+	6050 5250 6850 5250
 Wire Wire Line
-	5200 5250 5650 5250
+	5200 5250 5950 5250
 Wire Wire Line
 	3000 1450 3400 1450
 Wire Wire Line
@@ -919,4 +897,15 @@ Text Label 5800 1700 0    60   ~ 0
 GND
 Text Label 4300 1700 0    60   ~ 0
 RCOK
+$Comp
+L CONN_01X02 P9
+U 1 1 57755189
+P 6000 5450
+F 0 "P9" H 6000 5600 50  0000 C CNN
+F 1 "CONN_01X02" V 6100 5450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 6000 5450 50  0001 C CNN
+F 3 "" H 6000 5450 50  0000 C CNN
+	1    6000 5450
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

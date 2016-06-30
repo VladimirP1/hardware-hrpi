@@ -2,7 +2,7 @@
 
   (general
     (links 107)
-    (no_connects 3)
+    (no_connects 0)
     (area 129.924999 104.924999 227.575001 177.575001)
     (thickness 1.6)
     (drawings 55)
@@ -455,7 +455,7 @@
     (pad 39 thru_hole oval (at 0 48.26 90) (size 2.1 2.1) (drill 1.016) (layers *.Cu *.Mask F.SilkS))
     (pad 40 thru_hole oval (at 2.54 48.26 90) (size 2.1 2.1) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 40 /AUX1))
-    (model /home/admin/Документы/PINS.x3d
+    (model ./PINS.x3d
       (at (xyz 0.15 0.05 -0.456693))
       (scale (xyz 10 10 10))
       (rotate (xyz -90 0 0))
